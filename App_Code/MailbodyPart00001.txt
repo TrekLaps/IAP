@@ -1,0 +1,71 @@
+﻿<html>
+<body style="direction: rtl; width: 100% !important; background-color: #c7c7c7; margin-top: 0;
+    margin-bottom: 0; margin-right: 0; margin-left: 0; padding-top: 0; padding-bottom: 0;
+    padding-right: 0; padding-left: 0; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table"
+        style="background-color: #c7c7c7;">
+        <tbody>
+            <tr style="border-collapse: collapse;">
+                <td align="center" bgcolor="#c7c7c7" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                    border-collapse: collapse;">
+                    <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0" style="margin-top: 0;
+                        margin-bottom: 0; margin-right: 10px; margin-left: 10px;">
+                        <tbody>
+                            <tr style="border-collapse: collapse;">
+                                <td class="w640" width="640" height="20" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                    border-collapse: collapse;">
+                                </td>
+                            </tr>
+                           
+                            <tr style="border-collapse: collapse;">
+                                <td id="header" class="w640" width="640" align="center" bgcolor="#006b36" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                    border-collapse: collapse;">
+                                    <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr style="border-collapse: collapse;">
+                                                <td class="w20"  style="color:#FFF;font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+													إدارة متوسطة المراجعة الداخلية
+                                                </td>
+                                                
+                                                <td  style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+                                                    <div align="center" id="headline">
+                                                        <p style="color: #FFF; font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                            font-size: 36px; text-align: right; vertical-align:middle;">
+                                                            <strong>منصة المراجعة الداخلية</strong>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                                <td class="w30" height="46" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+													&nbsp;
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="border-collapse: collapse;">
+                                <td class="w640" width="640" height="30" bgcolor="#ffffff" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                    border-collapse: collapse;">
+                                </td>
+                            </tr>
+                            <tr id="simple-content-row" style="border-collapse: collapse;">
+                                <td class="w640" width="640" bgcolor="#ffffff" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                    border-collapse: collapse;">
+                                    <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0">
+                                        <tbody>
+                                            <tr style="border-collapse: collapse;">
+                                                <td class="w30" height="46" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+                                                </td>
+                                                <td class="w580" width="580" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+                                                    <table class="w580" width="580" cellpadding="0" cellspacing="0" border="0" 
+                                                        align="center">
+                                                        <tbody>
+                                                            <tr style="border-collapse: collapse;" align="right">
+                                                                <td class="w580" width="580" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                                    border-collapse: collapse;">
+                                                                               

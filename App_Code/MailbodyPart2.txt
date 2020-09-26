@@ -1,0 +1,20 @@
+﻿
+    </div>
+
+
+
+    <div style="bottom:0;">
+
+        <h3 style="color:#13a05c;"> الإدارة متوسطة العامة للمراجعة الداخلية</h3>
+
+        <span class="left:0;">
+            <img src="URLS/images/MailDownLeft.png" width="200" />
+        </span>
+
+        <span style="top:0;right:0;text-align: right;float: right;">
+            <img src="URLS/images/MailDown.png" />
+        </span>
+    </div>
+
+</body>
+</html>

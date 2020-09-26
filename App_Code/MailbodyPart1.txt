@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        @font-face {
+            font-family: 'Bahij_TheSansArabic-Plain';
+            src: url('URLS/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+        }
+
+        .BodyMail {
+            font-family: Bahij_TheSansArabic-Plain;
+            direction: ltr;
+        }
+
+        .Lsting {
+            list-style-image: url('URLS/images/list.png');
+        }
+    </style>
+</head>
+<body class="BodyMail">
+     <span style="top:0; left:0;">
+        <img src="URLS/images/SAGIA-logo.png" />
+
+
+    </span>
+
+
+
+    <span style="top:0;text-align: right;float: right;">
+
+        <img src="URLS/images/MailRight.png" />
+
+    </span>
+    <span style="color:#13a05c; display:inline-block;font-size:1.5em; font-weight:600; top:0px; right:100px; text-align:right;float:right "> منصة المراجعة الداخلية</span>
+
+    <div style=" text-align: right;">
+        &nbsp;

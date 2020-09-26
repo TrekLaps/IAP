@@ -1,0 +1,433 @@
+﻿table {
+    font-size: 16px;
+}
+
+.tab-content {
+    background-color: #f5f4f4;
+    padding: 5px 15px;
+}
+
+.Manual {
+}
+
+    .Manual > a {
+        width: 200px;
+        border-top: 5px;
+        font-family: 'Traditional Arabic';
+        color: #007044;
+        font-size: 30px;
+        font-weight: 600;
+        display: grid;
+        text-align: center;
+    }
+
+        .Manual > a > .Img {
+            background-image: url('../icons/TopBar/Manual1.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            min-height: 56px;
+            height: 56px;
+        }
+
+        .Manual.active > a, .Manual.active > a:focus, .Manual > a:hover {
+            width: 200px;
+            color: #91c463 !important;
+            font-size: 30px !important;
+            background-color: #f5f4f4 !important;
+            font-family: 'Traditional Arabic';
+            background-repeat: no-repeat;
+            background-position: center;
+            font-weight: 600;
+            border-top: 5px;
+        }
+
+            .Manual.active > a > .Img, .Manual.active:focus > a > .Img, .Manual:hover > a > .Img {
+                background-image: url('../icons/TopBar/Manual2.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+                min-height: 56px;
+                height: 56px;
+            }
+/********************/
+
+.Home{}
+
+    .Home > a {
+      
+        width: 200px;
+        border-top: 5px;
+        font-family: 'Traditional Arabic';
+        color: #007044;
+        font-size: 30px;
+        font-weight: 600;
+        display:grid;
+        text-align: center;
+    }
+        .Home > a>.Img {
+            background-image: url('../icons/TopBar/home1.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            min-height:56px;height:56px;
+        }
+
+        .Home.active > a, .Home.active > a:focus, .Home > a:hover {
+            width: 200px;
+            color: #00564e !important;
+            font-size: 30px !important;
+            background-color: #f5f4f4 !important;
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            font-weight: 600;
+            border-top: 5px;
+        }
+            .Home.active > a > .Img, .Home.active:focus > a > .Img, .Home:hover > a > .Img {
+                background-image: url('../icons/TopBar/home2.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+                min-height: 56px;
+                height: 56px;
+            }
+
+
+.Result {
+    
+}
+.Result > a {
+    
+    width: 200px;
+    border-top: 5px;
+    display:grid;
+    font-family: 'Traditional Arabic';
+    color: #007044;
+    font-size: 30px;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: center;
+}
+    .Result > a > .Img {
+        background-image: url('../icons/TopBar/Audit1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        min-height: 56px;
+        height: 56px;
+    }
+    .Result.active > a > .Img, .Result:focus > a > .Img, .Result:hover > a > .Img {
+        background-image: url('../icons/TopBar/audit2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        min-height: 56px;
+        height: 56px;
+    }
+    .Result.active > a, .Result.active > a:focus, .Result > a:hover {
+         width: 200px;
+        color: #91c463 !important;
+        font-size: 30px !important;
+        background-color: #f5f4f4 !important;
+        font-family: 'Traditional Arabic';
+        background-repeat: no-repeat;
+        background-position: right center;
+        font-weight: 600;
+        border-top: 5px;
+        font-family: 'Traditional Arabic';
+    }
+.Review {
+    
+}
+
+.Review > a {
+    width: 200px;
+    border-top: 5px;
+    display: grid;
+    font-family: 'Traditional Arabic';
+    color: #007044;
+    font-size: 30px;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: center;
+}
+
+    .Review > a > .Img {
+        background-image: url('../icons/TopBar/result1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        min-height: 56px;
+        height: 56px;
+    }
+
+.Review.active > a > .Img, .Review:focus > a > .Img, .Review:hover > a > .Img {
+    background-image: url('../icons/TopBar/result2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    min-height: 56px;
+    height: 56px;
+}
+
+.Review.active > a, .Review.active > a:focus, .Review > a:hover {
+    width: 200px;
+    color: #91c463 !important;
+    font-size: 30px !important;
+    background-color: #f5f4f4 !important;
+    font-family: 'Traditional Arabic';
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-weight: 600;
+    border-top: 5px;
+    font-family: 'Traditional Arabic';
+}
+
+
+.Admin {
+   
+}
+.Admin > a {
+    width: 200px;
+    border-top: 5px;
+    display: grid;
+    font-family: 'Traditional Arabic';
+    color: #007044;
+    font-size: 30px;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: center;
+}
+
+    .Admin > a > .Img {
+        background-image: url('../icons/TopBar/admin1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        min-height: 56px;
+        height: 56px;
+    }
+
+    .Admin.active > a > .Img, .Admin:focus > a > .Img, .Admin:hover > a > .Img {
+        background-image: url('../icons/TopBar/admin2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        min-height: 56px;
+        height: 56px;
+    }
+
+.Admin.active > a, .Admin.active > a:focus, .Admin > a:hover {
+    width: 200px;
+    color: #91c463 !important;
+    font-size: 30px !important;
+    background-color: #f5f4f4 !important;
+    font-family: 'Traditional Arabic';
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-weight: 600;
+    border-top: 5px;
+    font-family: 'Traditional Arabic';
+}
+.NewMain {
+   
+}
+.NewMain > a {
+   
+    width: 200px;
+    display:grid;
+    border-top: 5px;
+    color: #007044;
+    font-size: 30px;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: center;
+    font-family: 'Traditional Arabic';
+}
+.NewMain > a {
+    width: 200px;
+    border-top: 5px;
+    display: grid;
+    font-family: 'Traditional Arabic';
+    color: #007044;
+    font-size: 30px;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: center;
+}
+
+    .NewMain > a > .Img {
+        background-image: url('../icons/TopBar/report1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        min-height: 56px;
+        height: 56px;
+    }
+
+.NewMain.active > a > .Img, .NewMain:focus > a > .Img, .NewMain:hover > a > .Img {
+    background-image: url('../icons/TopBar/report2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    min-height: 56px;
+    height: 56px;
+}
+
+.NewMain.active > a, .NewMain.active > a:focus, .NewMain > a:hover {
+    width: 200px;
+    color: #91c463 !important;
+    font-size: 30px !important;
+    background-color: #f5f4f4 !important;
+    font-family: 'Traditional Arabic';
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-weight: 600;
+    border-top: 5px;
+    font-family: 'Traditional Arabic';
+}
+.navlink {
+    display: inline-block;
+    margin: auto;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+    .navlink a {
+        border-radius: 5px;
+        flex: 0 0 18%;
+        /* any width as long a % times number of items does not exceed 100% */
+        height: 50px;
+        text-align: center;
+        font-weight: 600;
+        color: #007044;
+        line-height: 50px;
+        min-width: 200px;
+    }
+
+        .navlink a:hover, .navlink a:focus, .navlink .active {
+            border-radius: 5px;
+            flex: 0 0 18%;
+            /* any width as long a % times number of items does not exceed 100% */
+            height: 50px;
+            text-align: center;
+            background: #FFFFFF;
+            color: #91c463;
+            line-height: 50px;
+        }
+
+    .navlink P {
+        border-radius: 5px;
+        flex: 0 0 18%;
+        height: 50px;
+        text-align: center;
+        margin-right: 35px;
+        background: #FFF;
+        color: #afbac3;
+        line-height: 50px;
+        min-width: 200px;
+    }
+
+
+
+
+
+.cardd {
+    position: relative;
+    max-width: 500px;
+    height: 250px;
+    background: #f2f2f2;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transition: .5s;
+    overflow: hidden;
+}
+
+
+
+
+
+    .cardd:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: rgba(255,255,255,.1);
+        z-index: 1;
+        transform: skewY(-5deg) scale(1.2);
+    }
+
+#customers {
+    font-family: 'Simplified Arabic';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #customers td, #customers th {
+        border: 1px solid rgba(0,0,0,.3);
+        padding: 8px;
+        text-align: center;
+    }
+
+
+
+    #customers tr:hover {
+        background-color: rgba(0, 0, 0, 0.13);
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: rgba(0,0,0,.3);
+        color: white;
+    }
+
+#customerss {
+    font-family: 'Simplified Arabic';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #customerss td, #customers th {
+        border: 1px solid rgba(0,0,0,.3);
+        padding: 8px;
+        text-align: center;
+    }
+
+
+
+    #customerss tr:hover {
+        background-color: rgba(0, 0, 0, 0.13);
+    }
+
+    #customerss th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #91c463;
+        color: white;
+        border: 1px solid rgba(0,0,0,.3);
+    }
+
+.centerBk {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.nav-pills > li > a {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}

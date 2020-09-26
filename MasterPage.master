@@ -1,0 +1,610 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>نظام المراجعة الداخلية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" />
+
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.gritter.min.css" />
+    <link href="assets/css/MainPage.css" rel="stylesheet" />
+    <style>
+        /*Strip the ul of padding and list styling*/
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            z-index: 9999;
+        }
+            /*Create a horizontal list with spacing*/
+            .menu li {
+                display: inline-block;
+                float: left;
+                margin-right: 1px;
+            }
+                /*Style for menu links*/
+                .menu li a {
+                    font-size: 16px;
+                    display: block;
+                    width: 220px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    color: #fff;
+                    background: #009688bf;
+                    text-decoration: none;
+                }
+                /*Hover state for top level links*/
+                .menu li:hover a {
+                    background: #19c589;
+                }
+                /*Style for dropdown links*/
+                .menu li:hover ul a {
+                    background: #f3f3f3;
+                    color: #2f3036;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                    /*Hover state for dropdown links*/
+                    .menu li:hover ul a:hover {
+                        background: #19c589;
+                        color: #fff;
+                    }
+                /*Hide dropdown links until they are needed*/
+                .menu li ul {
+                    display: none;
+                    z-index: 3;
+                }
+                    /*Make dropdown links vertical*/
+                    .menu li ul li {
+                        display: block !important;
+                        float: none;
+                    }
+                        /*Prevent text wrapping*/
+                        .menu li ul li a {
+                            width: auto;
+                            width: 200px;
+                            padding: 0 20px;
+                        }
+                /*Display the dropdown on hover*/
+                .menu li a:hover + .hidden, .hidden:hover {
+                    display: block !important;
+                }
+        /*Style 'show menu' label button and hide it by default*/
+        .show-menu {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            color: #fff;
+            background: #19c589;
+            text-align: center;
+            padding: 10px 0;
+            display: none;
+        }
+        /*Hide checkbox*/
+        input[type=checkbox] {
+            display: block;
+        }
+            /*Show menu when invisible checkbox is checked*/
+            input[type=checkbox]:checked ~ #menu {
+                display: block;
+            }
+        /*Responsive Styles*/
+        @media screen and (max-width : 760px) {
+            /*Make dropdown links appear inline*/
+            .menu {
+                position: static;
+                display: none;
+            }
+            /*Create vertical spacing*/
+            li {
+                margin-bottom: 1px;
+            }
+                /*Make all menu links full width*/
+                ul li, li a {
+                    width: 100%;
+                }
+            /*Display 'show menu' link*/
+            .show-menu {
+                display: block;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="no-skin rtl">
+    <form id="form1" runat="server">
+
+        <div class="main-container ace-save-state" id="main-container">
+            <script type="text/javascript">
+                try { ace.settings.loadState('main-container') } catch (e) { }
+            </script>
+
+
+            <div class="main-content">
+                <div class="main-content-inner">
+
+                    <div id="navbar" class="navbar navbar-default          ace-save-state">
+                        <div class="navbar-container ace-save-state" id="navbar-container">
+                            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                                <span class="sr-only">Toggle sidebar</span>
+
+                                <span class="icon-bar"></span>
+
+                                <span class="icon-bar"></span>
+
+                                <span class="icon-bar"></span>
+                            </button>
+
+
+
+                            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                                <ul class="nav ace-nav">
+
+                                    <li class="white dropdown-modal">
+                                        <span class="user-info">
+
+                                            <span>&nbsp;
+                                                <label style="font-size: 15px;" runat="server" id="UName" visible="false" />
+                                            </span>
+                                        </span>
+
+
+                                    </li>
+                                    <li class="purple dropdown-modal" runat="server" id="Comments" style="display: none;">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                            <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+
+                                        </a>
+
+                                        <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                                            <li class="dropdown-header">
+                                                <i class="ace-icon fa fa-exclamation-triangle"></i>
+                                                يوجد ردود على الملاحظات
+                                            </li>
+
+                                            <li class="dropdown-content">
+                                                <ul class="dropdown-menu dropdown-navbar ">
+                                                    <asp:Repeater ID="RepComments" runat="server">
+                                                        <ItemTemplate>
+
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="clearfix">
+                                                                        <span class="pull-left">
+                                                                            <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+                                                                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("ComDate") %>'></asp:Label>
+
+                                                                        </span>
+                                                                        <span class="pull-right badge badge-info">
+                                                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("RepName") %>'></asp:Label></span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown-footer">
+                                                <a href="ReportsDiv.aspx">الملاحظات والتوصيات<i class="ace-icon fa fa-arrow-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="navbar-buttons navbar-header pull-left" role="navigation">
+                                <ul class="nav ace-nav">
+
+                                    <!-- Log Data Start 
+                                    <li class="white dropdown-modal " style="display:none;" runat="server" id="LogDat">
+                                     <a href="Log.aspx" style="font-size:small">  
+										Log Data<i class="ace-icon fa fa-list-ol small"></i>
+                                        </a>
+
+
+                                    </li>-->
+
+                                    <!-- Log Data END -->
+                                    <li class="white dropdown-modal" >
+
+                                        <a href="Presentation.aspx" style="background: #007044;"><i class="ace-icon fa fa-info-circle"></i>
+                                            شرح توضيحى
+                                        </a>
+
+
+                                    </li>
+                                    <li class="white dropdown-modal">
+                                        <asp:LinkButton runat="server" Height="45" CssClass="padding-0" ID="Log" BackColor="#007044" OnClick="Log_Click">
+									<span style="font-size:10px;">	<i class="ace-icon fa fa-power-off"></i>
+										تسجيل خروج</span>
+                                        </asp:LinkButton>
+
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.navbar-container -->
+                    </div>
+
+
+
+                    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="ace-icon fa fa-home home-icon"></i>
+                                <a href="#">الرئيسية</a>
+                            </li>
+
+                            <li class="active">
+
+                                <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+                                </asp:ContentPlaceHolder>
+
+
+                            </li>
+                        </ul>
+                        <!-- /.breadcrumb -->
+
+                    </div>
+
+                    <div class="page-content">
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- PAGE CONTENT BEGINS -->
+                                <ul class="menu" id="menu"><li>
+                                    <a href="Presentation.aspx">شرح توضيحى</a>
+                                                           </li>
+                                    <li  runat="server" id="Review">
+                                            <a href="#" >
+                                                
+                                                نتائج الملاحظات  ￬</a>
+                                        <ul class="hidden">
+                                           <li> <a runat="server" id="ViewRes" style="display: none;" href="MainDashboardGraph01.aspx"> المؤسسة 
+                                            </a></li> 
+                                            <li>
+                                            <a runat="server" id="ViewResSectors" style="display: none;" href="PieDashboard01.aspx"> الإدارات عليا 
+                                            </a></li>
+                                          
+                                            <li>
+                                            <a runat="server" id="ViewResAdm" style="display: none;" href="PieDashboardAdmin01.aspx"> الإدارات المتوسطة 
+                                            </a>
+</li>
+                                        </ul>
+                                        </li>
+                                        <li  runat="server" id="ReviewAdm" style="display: none;">
+                                            <asp:HyperLink ID="HyperLink1" runat="server">
+                                            نتائج الملاحظات</asp:HyperLink>
+                                        </li>
+
+                                        <li  runat="server" id="ReviewSection" style="display: none;">
+                                            <asp:HyperLink ID="HyperLink2" runat="server">
+                                           نتائج الملاحظات</asp:HyperLink>
+                                        </li>
+
+                                        <li  runat="server" style="display: none;" id="ReviewGv">
+                                            <a href="MainDashboardGraph01.aspx">
+                                               
+                                                نتائج الملاحظات</a>
+                                        </li>
+                                    <li runat="server" id="Result">
+                                        <a href="#">إدارة الملاحظات ￬</a>
+                                        <ul class="hidden">
+                                            <li><a runat="server" id="ViewNewNote" style="display: none;" href="NewReport.aspx">ملاحظة جديدة 
+                                            </a></li>
+                                            <li>
+
+                                                <a runat="server" id="ViewNotesRes" style="display: none;" href="ReportsDiv.aspx">عرض الملاحظات
+                                                </a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li runat="server" id="ResSection" style="display: none;">
+                                        <a href="ReportSection.aspx">إدارة الملاحظات</a>
+                                    </li>
+                                    <li runat="server" id="ViewNotesMyDepartment" style="display: none;">
+                                        <a href="ReportsView.aspx">إدارة الملاحظات</a>
+                                    </li>
+
+                                    <li runat="server" style="display: none;" id="SubReply">
+                                        <a href="#">الرد على الملاحظات ￬</a>
+                                        <ul class="hidden">
+                                            <li><a runat="server" id="Peplyview" style="display: none;" href="ManagerReports.aspx">الرد على الملاحظات</a></li>
+                                            <li><a runat="server" id="ViewPending" style="display: none;" href="PendingReports.aspx">الرد على الملاحظات</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li runat="server" id="NewMain">
+                                        <a href="MainReportNew.aspx">التقارير الاساسية</a>
+                                    </li>
+                                    <li runat="server" id="NewMainAdm">
+                                        <a href="MainReportNewAdm.aspx">التقارير الاساسية</a>
+                                    </li>
+
+
+                                    <li runat="server" id="NewMainSection">
+                                        <a href="MainReportSection.aspx">التقارير الاساسية</a>
+                                    </li>
+
+                                    <li id="NewRep" visible="false" runat="server" style="display: none;"><a href="NewReport.aspx">ملاحظة جديدة </a>
+                                    </li>
+
+                                    <li runat="server" id="SubAdmin" style="display: none;">
+                                        <a href="#">إدارة البيانات ￬</a>
+                                        <ul class="hidden">
+                                            <li><a runat="server" id="SecView" href="Sections.aspx">إدارات عليا</a></li>
+                                            <li><a runat="server" id="AdmView" href="Managments.aspx">إدارات متوسطة</a></li>
+                                            <li><a runat="server" id="PlansView" href="Plans.aspx">الخطة السنوية</a></li>
+                                            <li><a runat="server" id="UserView" href="Users.aspx">المستخدمين</a></li>
+                                            <li><a runat="server" style="display: none" id="AdmUseView" href="AdminUsers.aspx">إدارة النظام</a></li>
+                                            <li><a runat="server" style="display: none" id="RepView" href="ReportsUsers.aspx">صلاحيات إدارة الملاحظات </a></li>
+                                        </ul>
+                                    </li>
+                                    <li runat="server" id="Ul1"><a href="MainPage.aspx">الرئيسية</a></li>
+
+                                </ul>
+                                
+                                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                    
+
+
+                                        <div style="margin-top: 50px;">
+
+                                            <asp:ContentPlaceHolder ID="PageContent" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    
+                              
+
+                                <!-- PAGE CONTENT ENDS -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+
+                    <div class="modal fade" id="logout_popup" style="z-index: 1000000;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div style="width: 100%; height: 100%; margin: 0px; padding: 0px">
+                                        <div style="width: 25%; margin: 0px; padding: 0px; float: left;">
+                                            <i class="fa fa-warning red" style="font-size: 75px;"></i>
+                                        </div>
+                                        <div style="width: 70%; margin: 0px; padding: 0px; float: right; padding-top: 10px; font-size: 14px; padding-right: 3%;">
+                                            <h4>سوف يتم اغلاق الصفحة !</h4>
+                                            <p style="font-size: 15px;">سوف يتم خروجك خلال </p>
+                                            <span id="timer" style="font-size: 30px; font-weight: bold">10</span> ثانية				
+						<p style="font-size: 15px;">هل تود بقائك؟</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div style="margin-right: 30%; margin-bottom: 20px; margin-top: 20px;">
+                                    <a href="javascript:;" onclick="resetTimer()" class="btn btn-primary" aria-hidden="true">نعم استمر</a>
+                                    <a href="Login.aspx" class="btn btn-danger" aria-hidden="true">تسجيل خروج </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.page-content -->
+
+            </div>
+            <!-- /.main-content -->
+
+            <div class="footer">
+                <div class="footer-inner">
+                    <div class="footer-content">
+                        <span><%= DateTime.Now.Year.ToString() %>@</span>جميع الحقوق محفوظة ،
+                            
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div id="overlay" style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0; z-index: 999999; background-color: #808080; opacity: 0.7;">
+
+                <div class="easy-pie-chart percentage" data-percent="100" data-color="#87B87F" style="top: 40%; height: 75px; width: 75px; line-height: 74px; color: rgb(135, 184, 127);">
+                    <span class="percent">100</span>%
+												<canvas height="75" width="75"></canvas>
+                </div>
+
+            </div>
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+            </a>
+        </div>
+        <!-- /.main-container -->
+    </form>
+    <!-- basic scripts -->
+
+    <!--[if !IE]> -->
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- page specific plugin scripts -->
+
+    <!-- ace scripts -->
+    <script src="assets/js/ace-elements.min.js"></script>
+    <script src="assets/js/ace.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+    <!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+    <script src="assets/js/jquery-ui.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets/js/bootbox.js"></script>
+    <script src="assets/js/jquery.gritter.min.js"></script>
+    <script src="assets/js/spin.js"></script>
+    <script type="text/javascript">
+
+        function Closed() {
+            $("#NavMain  li ").each(function () {
+                if ($(this).has)
+                    $(this).removeClass("active");
+            })
+        }
+
+        function PreviewRep() {
+            Closed();
+            $(".SubRev").css("display", "inline-block");
+            $(".SubAdmin").css("display", "none");
+            $(".SubReply").css("display", "none");
+            $(".SubRes").css("display", "none");
+            $("#Review").addClass("active");
+
+        }
+
+        function PreviewRes() {
+            Closed();
+            $(".SubRes").css("display", "inline-block");
+            $(".SubAdmin").css("display", "none");
+            $(".SubReply").css("display", "none");
+            $(".SubRev").css("display", "none");
+            $("#Result").addClass("active");
+
+        }
+
+
+        function PreviewReply() {
+            Closed();
+            $(".SubReply").css("display", "inline-block");
+            $(".SubAdmin").css("display", "none");
+            $(".SubRes").css("display", "none");
+            $(".SubRev").css("display", "none");
+        }
+
+        function PreviewAdmin() {
+            Closed();
+            $(".SubAdmin").css("display", "inline-block");
+            $(".SubReply").css("display", "none");
+            $(".SubRes").css("display", "none");
+            $(".SubRev").css("display", "none");
+
+            $("#SubAdmin").addClass("active");
+        }
+
+        jQuery(function ($) {
+
+            $(window).load(function () {
+
+
+                $('#overlay').fadeOut();
+
+
+
+            });
+        });
+    </script>
+
+    <script>
+        var c = 0; max_count = 20; logout = true;
+        startTimer();
+        function startTimer() {
+            setTimeout(function () {
+                logout = true;
+                c = 0;
+                max_count = 20;
+                $('#timer').html(max_count);
+                $('#logout_popup').modal('show');
+                startCount();
+
+            }, 900000);
+        }
+
+        function resetTimer() {
+            logout = false;
+            $('#logout_popup').modal('hide');
+            startTimer();
+        }
+
+        function timedCount() {
+            c = c + 1;
+            remaining_time = max_count - c;
+            if (remaining_time == 0 && logout) {
+                $('#logout_popup').modal('hide');
+                location.href = "Login.aspx";
+
+            } else {
+                $('#timer').html(remaining_time);
+                t = setTimeout(function () { timedCount() }, 1000);
+            }
+        }
+
+        function startCount() {
+            timedCount();
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Javascript" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+﻿
+                                                                        
+                                                                        
+                                                                      </br>
+                                                                        
+                                                                         <a href="{2}">معلومات الملاحظة / التوصية</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                               
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr style="border-collapse: collapse;">
+                                <td class="w640" width="640" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                    border-collapse: collapse;">
+                                    <table id="footer" class="w640" width="640" cellpadding="0" cellspacing="0" border="0"
+                                         style="border-radius: 0px 0px 6px 6px; -moz-border-radius: 0px 0px 6px 6px;
+                                        -webkit-border-radius: 0px 0px 6px 6px; -webkit-font-smoothing: antialiased;
+                                        background-color: #006b36; color: #888888;">
+                                        <tbody>
+                                           
+                                            <tr style="border-collapse: collapse;">
+                                                
+                                                <td class="style2" valign="top" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;width: 851px; padding-top:20px;">
+                                                    
+                                                    <span align="right" class="footer-content-left" style="-webkit-text-size-adjust: none;
+                                                        -ms-text-size-adjust: none;float:right; font-size: 18px; line-height: 20px; color: #888888;
+                                                         padding-right: 10px;margin-bottom: 15px; " dir="rtl">
+                                                     <a style="color: #eeeeee; text-decoration: none; font-weight: bold;" 
+                                                        dir="rtl">  إدارة متوسطة المراجعة الداخلية </a>
+                                                    </span>
+                                                    <span align="right" style="-webkit-text-size-adjust: none;float:right;
+                                                        -ms-text-size-adjust: none; font-size: 18px; line-height: 20px; color: #888888;
+                                                         padding-right: 10px;vmargin-bottom: 15px;" dir="rtl">
+                                                        <a style="color: #eeeeee; text-decoration: underline; font-weight: bold;" 
+                                                        href="mailto:"dir="rtl">ايميل المراجعة الداخلية </a></span>
+
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr style="border-collapse: collapse;">
+                                                <td class="style3" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;width: 144px;">
+                                                </td>
+                                                <td class="style4" height="15" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+                                                </td>
+                                                <td class="w30" height="46" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+                                                </td>
+                                                <td class="w30" height="46" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                                    border-collapse: collapse;">
+                                                    &nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="border-collapse: collapse;">
+                                <td class="w640" width="640" height="60" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+                                    border-collapse: collapse;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="fb-root">
+    </div>
+
+</html>
